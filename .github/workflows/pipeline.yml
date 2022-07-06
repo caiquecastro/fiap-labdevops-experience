@@ -24,7 +24,6 @@ jobs:
               
       - name: Unit Test
         run: python -m unittest -v test
-
   Deploy:
     needs: Build
     runs-on: ubuntu-latest
@@ -60,3 +59,4 @@ jobs:
       # Enviando o código da App para o Heroku fazer Deploy
       - name: Push to Heroku & Deploy
         run: git push heroku HEAD:main --force
+
