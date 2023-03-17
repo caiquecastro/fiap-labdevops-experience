@@ -8,7 +8,7 @@ csrf.init_app(app) # Compliant
 
 @app.route("/")
 def pagina_inicial():
-    return "Hello World FIAP - Aula 04 - Arquitetura Cloud Native"
+    return "Hello World FIAP - Aula 04 - Arquitetura Cloud Native with secure image"
 
 if __name__ == '__main__':
     app.run()
