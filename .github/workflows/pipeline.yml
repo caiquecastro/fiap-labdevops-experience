@@ -25,6 +25,11 @@ jobs:
       - name: Unit Test
         run: python -m unittest -v test
         
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@1.9  #https://github.com/marketplace/actions/sonarcloud-scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
+        
       - name: Docker Login
         run: | 
           echo '${{ secrets.GOOGLE_CREDENTIALS }}' > key.json
