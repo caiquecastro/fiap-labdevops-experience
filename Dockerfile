@@ -20,7 +20,7 @@ COPY --chown=python:python requirements.txt .
 RUN pip install --trusted-host pypi.python.org -U -r requirements.txt
 
 # Copiar os arquivos da pasta local para dentro do container
-COPY --chown=python:python . .
+COPY --chown=python:python app.py .
 
 # Garante que será iniciado a aplicação.
 CMD ["gunicorn", "app:app"]
