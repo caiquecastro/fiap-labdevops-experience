@@ -8,7 +8,7 @@ csrf.init_app(app) # Compliant
 
 @app.route("/")
 def pagina_inicial():
-    return "Hello World - Arquitetura Cloud Native - Deploy on Terraform"
+    return "Entrega Final - FIAP"
 
 if __name__ == '__main__':
     app.run()
